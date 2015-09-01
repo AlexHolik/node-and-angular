@@ -1,0 +1,160 @@
+<div class="row sub-warning">
+    <div class="alert alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div class="row">
+            <div class="col-md-0"><img src="img/subscribers/warning_icon.png" alt="Warning Icon" /></div>
+            <div class="col-md-11">
+                <span class="span-21">IT'S EASY TO EXPAND YOUR SUBSCRIBERS BASE</span>
+                <p class="span-gray1">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row sub-body lg-sub-body">
+    <div class="row">
+        <div class="col-md-5 col-sm-3 sub-body-h3"><h3>SUBSCRIBERS</h3></div>
+        <div class="col-md-7 col-sm-9">
+            <div class="col-md-7 col-sm-7">
+                <div class="col-md-5 col-sm-5 sub-body-sel">
+                    <section class="main">
+                        <div class="wrapper-demo">
+                            <div id="dd" class="wrapper-dropdown-5" tabindex="1">Import<img src="img/signup/arrow_icon.png" alt="Arrow Icon" />
+                                <ul class="dropdown">
+                                    <li><a href="#"><i class="icon-user"></i>Internet</a></li>
+                                    <li><a href="#"><i class="icon-cog"></i>Colleges</a></li>
+                                    <li><a href="#"><i class="icon-remove"></i>Friends</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-md-5 col-sm-5 sub-body-sel">
+                    <section class="main">
+                        <div class="wrapper-demo">
+                            <div id="dd" class="wrapper-dropdown-5" tabindex="1">Export<img src="img/signup/arrow_icon.png" alt="Arrow Icon" />
+                                <ul class="dropdown">
+                                    <li><a href="#"><i class="icon-user"></i>Internet</a></li>
+                                    <li><a href="#"><i class="icon-cog"></i>Colleges</a></li>
+                                    <li><a href="#"><i class="icon-remove"></i>Friends</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="col-md-5 col-sm-5 sub-body-btn">
+                <button type="submit"><span class="span-16">NEW SUBSCRIBER</span></button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row sub-body sm-sub-body">
+    <div class="row">
+        <div class="col-sm-12 sub-body-h3"><h3>SUBSCRIBERS</h3></div>
+        <div class="col-sm-12">
+            <div class="col-md-7 col-sm-7">
+                <div class="col-md-5 col-sm-5 sub-body-sel">
+                    <section class="main">
+                        <div class="wrapper-demo">
+                            <div id="dd" class="wrapper-dropdown-5" tabindex="1">Import<img src="img/signup/arrow_icon.png" alt="Arrow Icon" />
+                                <ul class="dropdown">
+                                    <li><a href="#"><i class="icon-user"></i>Internet</a></li>
+                                    <li><a href="#"><i class="icon-cog"></i>Colleges</a></li>
+                                    <li><a href="#"><i class="icon-remove"></i>Friends</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-md-5 col-sm-5 sub-body-sel">
+                    <section class="main">
+                        <div class="wrapper-demo">
+                            <div id="dd" class="wrapper-dropdown-5" tabindex="1">Export<img src="img/signup/arrow_icon.png" alt="Arrow Icon" />
+                                <ul class="dropdown">
+                                    <li><a href="#"><i class="icon-user"></i>Internet</a></li>
+                                    <li><a href="#"><i class="icon-cog"></i>Colleges</a></li>
+                                    <li><a href="#"><i class="icon-remove"></i>Friends</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="col-md-5 col-sm-5 sub-body-btn">
+                <button type="submit"><span class="span-16">NEW SUBSCRIBER</span></button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row sub-body-search">
+    <div class="row sub-body-search-content">
+        <div class="col-md-8 col-sm-5">
+            <button type="submit" class="archive-btn">
+                <img src="img/subscribers/archive_icon.png" alt="Archive Icon" />&nbsp;&nbsp;<span class="span-16">ARCHIVE</span>
+            </button>
+        </div>
+        <div class="col-md-4 col-sm-7">
+            <div class="row integ-tab-search">
+                <a ng-click()><img src="img/integration/search_icon.png" alt="Search Icon" /></a>
+                <input type="text" name="filter-search" id="filter-search" placeholder="Search">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row sub-body-table">
+    <table id="mytable" class="table table-bordred table-striped">
+        <thead>
+        <th><input type="checkbox" id="checkall" /></th>
+        <th>Name</th>
+        <th>Infulence</th>
+        <th>Email</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Added</th>
+        <th>Source</th>
+        </thead>
+        <tbody>
+        <tr ng-repeat="data in datas">
+            <td><input type="checkbox" class="checkthis" /></td>
+            <td>{{data.name}}</td>
+            <td><p class="circle {{data.class}}"></p>{{data.infulence}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.age}}</td>
+            <td class="gender">{{data.gender}}</td>
+            <td>{{data.added}}</td>
+            <td>{{data.source}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="row sm-sub-body-table">
+    <scrollable-table watch="visibleProjects">
+        <table id="mytable" class="table table-bordred table-striped">
+            <thead>
+                <th><input type="checkbox" id="checkall" /></th>
+                <th>Name</th>
+                <th>Infulence</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Added</th>
+                <th>Source</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="data in datas">
+                    <td><input type="checkbox" class="checkthis" /></td>
+                    <td>{{data.name}}</td>
+                    <td><p class="circle {{data.class}}"></p>{{data.infulence}}</td>
+                    <td>{{data.email}}</td>
+                    <td>{{data.age}}</td>
+                    <td class="gender">{{data.gender}}</td>
+                    <td>{{data.added}}</td>
+                    <td>{{data.source}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </scrollable-table>
+</div>
+<div class="row sub-more">
+    <a class="span-15" ng-click="">Show Archived Subscribers</a>
+</div>

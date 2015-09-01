@@ -1,0 +1,70 @@
+<div class="row integ-content">
+	<p class="span-16 span-bold">
+		{{contentOne}}
+	</p>
+	<p class="span-16 span-gray">
+		{{contentTwo}}
+	</p>
+</div>
+<tabset justified="true">
+	<tab heading="All Services">
+		<div class="row integ-tab-body">
+			<div class="row integ-tab-search">
+				<a ng-click()><img src="img/integration/search_icon.png" alt="Search Icon" /></a>
+				<input type="text" name="filter-search" id="filter-search" placeholder="Filter by name">
+			</div>
+			<div class="row integ-tab-datas">
+				<div class="row integ-tab-content" ng-repeat="data in datas">
+					<div class="integ-tab-content-logo"><img ng-src="{{data.src}}" /></div>
+					<div class="integ-tab-content-body">
+						<p class="span-17 span-bold">{{data.title}}</p>
+						<p class="span-14">{{data.content}}</p>
+					</div>
+					<div>
+						<button ng-click="addConf('{{data.title}}')">+ ADD</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</tab>
+	<tab heading="Configured Integrations">
+		<div class="row integ-tab-body">
+			<div class="row integ-tab-search">
+				<a ng-click()><img src="img/integration/search_icon.png" alt="Search Icon" /></a>
+				<input type="text" name="filter-search" id="filter-search" placeholder="Filter by name">
+			</div>
+			<div class="row integ-tab-datas">
+				<div class="row integ-tab-content">
+					<div class="integ-tab-content-logo"><img ng-src="{{datas1.src}}" /></div>
+					<div class="integ-tab-content-body">
+						<p class="span-17 span-bold">{{datas1.title}}</p>
+						<p class="span-14">{{datas1.content}}</p>
+					</div>
+					<div>
+						<button ng-click="addInte('{{datas1.title}}')">+ ADD</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</tab>
+	<tab heading="Authentications">
+		<div class="row integ-tab-body">
+			<div class="row integ-tab-search">
+				<a ng-click()><img src="img/integration/search_icon.png" alt="Search Icon" /></a>
+				<input type="text" name="filter-search" id="filter-search" placeholder="Filter by name">
+			</div>
+			<div class="row integ-tab-datas">
+				<div class="row integ-tab-content">
+					<div class="integ-tab-content-logo"><img ng-src="{{datas2.src}}" /></div>
+					<div class="integ-tab-content-body">
+						<p class="span-17 span-bold">{{datas2.title}}</p>
+						<p class="span-14">{{datas2.content}}</p>
+					</div>
+					<div>
+						<button ng-href="auth/{{datas2.callbackURL}}">+ ADD</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</tab>
+</tabset>

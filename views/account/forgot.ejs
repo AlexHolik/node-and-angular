@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EasyCast</title>
+    <!-- Bootstrap framework -->
+    <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap-responsive.min.css" />
+    <!-- theme color-->
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- tooltip -->
+    <link rel="stylesheet" href="/lib/qtip2/jquery.qtip.min.css" />
+    <!-- main styles -->
+    <link rel="stylesheet" href="/css/blue-login.css" />
+    <!-- Custom Select CSS -->
+    <link rel="stylesheet" href="/css/custom_select.css" />
+    <noscript><link rel="stylesheet" type="text/css" href="/css/noJS.css" /></noscript>
+    <!-- nice form elements -->
+    <link rel="stylesheet" href="/lib/uniform/Aristo/uniform.aristo.css" />
+    <!-- splashy icons -->
+    <link rel="stylesheet" href="/img/splashy/splashy.css" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link href='/css/fonts.googleapis.com.css' rel='stylesheet' type='text/css'>
+
+    <!--[if lte IE 8]>
+    <script src="/js/vendor/ie/html5.js"></script>
+    <script src="/js/vendor/ie/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div id="maincontainer" class="clearfix">
+    <header>
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="brand" href="/">
+                        <img src="img/logo.png" alt="SiteLogo" />
+                    </a>
+                    <ul class="nav nav-tabs">
+                        <li>
+                          <a href="#"><img src="img/hd_icon1.png" alt="Features" />&nbsp;Features</a> 
+                        </li>
+                        <li>
+                          <a href="#"><img src="img/hd_icon2.png" alt="Blogs" />&nbsp;Blog</a> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="contentwrapper">
+        <div class="main_content">
+            <div class="container w-xxl w-auto-xs">
+                <div class="row fp-bg">
+                    <div class="row fp-header">
+                        <p class="span-24">Account Reminder</p>
+                        <p class="span-15">
+                            Forgot your account name? No problem.<br/>
+                            Just enter your email address below and we'll send you a link to access your account.
+                        </p>
+                    </div>
+                    <form action="/forgot" method="POST">
+                        <div class="list-group-item div-email">
+                            <input type="email" name="username" placeholder="Email Address" class="form-control no-border" required>
+                        </div>
+                        <button type="submit" class="btn-lg-custom btn" style="background: #e94727;">SEND</button>
+                    </form>
+                    <div class="text-center m-t m-b fp-bot"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+<script src="/js/vendor/jquery.actual.min.js"></script>
+<script src="/js/vendor/jquery.timeago.js"></script>
+<script src="/lib/validation/jquery.validate.min.js"></script>
+<script src="/lib/moment_js/moment.min.js"></script>
+<script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- styled form elements -->
+<!--<script src="/lib/uniform/jquery.uniform.min.js"></script>-->
+<!-- leanModal -->
+<script src="/js/vendor/jquery.leanModal.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $('a[rel*=leanModal]').leanModal({ top : 200, closeButton: ".modal_close" });
+    });
+    /* Custom Select Javascript */
+    function DropDown(el) {
+        this.dd = el;
+        this.initEvents();
+    }
+    DropDown.prototype = {
+        initEvents : function() {
+            var obj = this;
+
+            obj.dd.on('click', function(event){
+                $(this).toggleClass('active');
+                event.stopPropagation();
+            });
+        }
+    }
+
+    $(function() {
+
+        var dd = new DropDown( $('#dd') );
+
+        $(document).click(function() {
+            // all dropdowns
+            $('.wrapper-dropdown-5').removeClass('active');
+        });
+
+    });
+</script>
+</body>
+</html>

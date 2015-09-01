@@ -1,0 +1,15 @@
+.wrapper-dropdown-5:focus {
+    background: #fff;
+    box-shadow: none;
+    border-bottom: none;
+    color: darkgray;
+}
+
+.wrapper-dropdown-5:focus:after {
+    border-color: #82d1ff transparent;
+}
+
+.wrapper-dropdown-5:focus .dropdown {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    max-height: 400px;
+}

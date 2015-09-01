@@ -1,0 +1,108 @@
+<!-- Jquery UI Import -->
+<script type="text/javascript" src="/lib/jquery.min.js"></script>
+<!-- TinyMCE -->
+<script type="text/javascript" src="/lib/angular/tinymce-dist/tinymce.min.js"></script>
+<!-- Angular UI Import -->
+<script src="/lib/angular/angular.min.js"></script>
+<script src="/lib/angular/angular-resource.min.js"></script>
+<!--<script src="/lib/angular/angular-sanitize.js"></script>-->
+<script src="/lib/angular/angular-scrollable-table.min.js"></script>
+
+<!-- leanModal -->
+<script src="/js/vendor/jquery.leanModal.min.js"></script>
+
+<script src="/js/vendor/jquery.actual.min.js"></script>
+<script src="/js/vendor/jquery.timeago.js"></script>
+<script src="/lib/validation/jquery.validate.min.js"></script>
+<script src="/lib/moment_js/moment.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="/lib/bootstrap/js/ui-bootstrap-tpls-0.12.0.min.js"></script>
+<script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Table theme Javascript -->
+<script src="/lib/bootstrap/js/bootstrap-table.js"></script>
+
+<!-- Custom Select Javascript -->
+<script src="/js/vendor/modernizr.custom.79639.js"></script>
+
+<!-- data table -->
+<script src="/lib/angular/ng-table/ng-table.js"></script>
+
+<!-- project -->
+<script src="/js/app.js"></script>
+
+<!-- Controllers -->
+<script src="/js/controller/dashboardCtrl.js"></script>
+<script src="/js/controller/integrationsCtrl.js"></script>
+<script src="/js/controller/subscribersCtrl.js"></script>
+<script src="/js/controller/campaignsCtrl.js"></script>
+
+<script type="text/javascript">
+    /* Pop Up START */
+    $(function() {
+     $('a[rel*=leanModal]').leanModal({ top : 200, closeButton: ".modal_close" });
+    });
+    /* Pop Up END */
+
+   /* Custom Select Javascript START */
+    function DropDown(el) {
+        this.dd = el;
+        this.initEvents();
+    }
+    DropDown.prototype = {
+        initEvents : function() {
+            var obj = this;
+
+            obj.dd.on('click', function(event){
+                $(this).toggleClass('active');
+                event.stopPropagation();
+            });
+        }
+    }
+
+    $(function() {
+
+        var dd = new DropDown( $('#dd') );
+
+        $(document).click(function() {
+            // all dropdowns
+            $('.wrapper-dropdown-5').removeClass('active');
+        });
+
+    });
+    /* Custom Select Javascript END */
+
+    /* Table theme Javascript START */
+    $("#mytable #checkall").click(function () {
+        if ($("#mytable #checkall").is(':checked')) {
+            $("#mytable input[type=checkbox]").each(function () {
+                $(this).prop("checked", true);
+            });
+
+        } else {
+            $("#mytable input[type=checkbox]").each(function () {
+                $(this).prop("checked", false);
+            });
+        }
+    });
+
+    $("[data-toggle=tooltip]").tooltip();
+    /* Table theme Javascript END */
+
+    /* Add active class to menu START */
+    var currentURL = $(location).attr('href');
+    var seg = currentURL.split('/');
+    var active_class = seg;
+    /* Add active class to menu END */
+
+    /* MENU toggle action START */
+    $('.nav-toggle').click(function(){
+        //get collapse content selector
+        var collapse_content_selector = $(this).attr('id');
+        //make the collapse content to be shown or hide
+        $(collapse_content_selector).toggle();
+    });
+    /* MENU toggle action END */
+</script>
+<!-- Services -->

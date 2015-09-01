@@ -1,0 +1,110 @@
+<header>
+	<nav class="navbar navbar-fixed-top">
+		<div class="sm-navbar-menu">
+			<a ng-click="toggle()"><img src="img/dashboard/menu_sm_icon.png" /></a>
+		</div>
+	  <div class="navbar-header">
+	    <a class="brand" href="#"><img src="img/company_logo.png" alt="CompanyLogo" /></a>
+	  </div>
+	  <div class="sm-navbar-header">
+	    <a class="brand" href="#"><img src="img/company_logo.png" alt="CompanyLogo" /></a>
+	  </div>
+	  <div class="navbar-collapse collapse">
+	    <ul class="nav navbar-nav lg-menu-ul" bs-active-link>
+	      <li><a href="#/subscribers">SUBSCRIBERS</a></li>
+	      <li><a href="#">REPORTS</a></li>
+	      <li><a href="#/integrations">INTEGRATIONS</a></li>
+	    </ul>
+	    <ul class="nav navbar-nav sm-menu-ul">
+	      <li><a class="nav-toggle" id="#collapse1">MENU <label class="span-arrow"></label></a></li>
+	    </ul>
+	    <ul class="nav navbar-nav other-nav navbar-right">
+			<li class="sm-nav-li" id="sm-nav-li">
+				<a id="go" rel="leanModal" name="signup" href="#signup">Settings</a>
+			</li>
+	      	<li class="sm-nav-li"><a href="#">Help</a></li>
+	      	<li><a href="/signout">Sign Out&nbsp;<img src="img/signout_icon.png" alt="SignOut" /></a></li>
+	  	</ul>
+	  </div>
+	</nav>
+	<link href="/css/font-awesome.min.css" rel="stylesheet">
+	<div class="nav-side-menu" ng-class="{'slide-out':boolChangeClass}">
+	  <div class="menu-list">
+	    <ul id="menu-content" class="menu-content collapse out" bs-active-link>
+	      <li class="new-menu">
+	        <a href="#/new_campaigns">
+	         <img src="img/dashboard/new_icon.png" alt="New Icon" />&nbsp;<span class="span-21">NEW</span>
+	        </a>
+	      </li>
+	      <li data-target="#products" class="collapsed">
+	        <a href="#/dashboard" class="span-15">DASHBOARD</a>
+	      </li>
+	      <li data-target="#products" class="collapsed">
+	        <a href="#/campaigns" class="span-15">CAMPAIGNS</a>
+	      </li>
+	      <li data-target="#products" class="collapsed">
+	        <a href="#" class="span-15">
+	        	<img src="img/dashboard/menu_icon.png" />    <span>Published</span><span class="badge-custom">0</span>
+	        </a>
+	      </li>
+	      <li data-target="#products" class="collapsed">
+	        <a href="#" class="span-15">
+	        	<img src="img/dashboard/menu_icon.png" />    <span>Draft</span><span class="badge-custom">3</span>
+	        </a>
+	      </li>
+	    </ul>
+	  </div>
+	</div>
+	<div id="signup">
+		<div id="signup-ct">
+			<div id="signup-header">
+				<span class="span-21">ADD USERS</span>
+				<a class="modal_close" href="#"></a>
+			</div>
+
+			<form action="/signup" method="POST">
+				<input type="hidden" id="hear-fld-hid" value="0">
+				<div class="txt-fld">
+					<input id="first_name" class="good_input" name="first_name" type="text" placeholder="First Name">
+					<input id="last_name" class="good_input" name="last_name" type="text"  placeholder="Last Name">
+				</div>
+				<div class="email-fld">
+					<input id="username" name="username" type="email" placeholder="Email">
+				</div>
+				<div class="pass-fld">
+					<input id="password" name="password" type="password" placeholder="Password">
+				</div>
+				<div class="hear-fld">
+					<section class="main">
+						<div class="wrapper-demo">
+							<div id="dd" class="wrapper-dropdown-5" tabindex="1">How did you hear about us?<img src="img/signup/arrow_icon.png" alt="Arrow Icon" />
+								<ul class="dropdown">
+									<li><a href="#"><i class="icon-user"></i>Internet</a></li>
+									<li><a href="#"><i class="icon-cog"></i>Colleges</a></li>
+									<li><a href="#"><i class="icon-remove"></i>Friends</a></li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+				<div class="btn-fld">
+					<button type="submit"><span class="span-21 span-bold">SUBMIT</span></button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div id="lean_overlay"></div>
+	<div id="collapse1" style="display:none">
+		<ul bs-active-link>
+			<li data-target="#products" class="collapsed">
+				<a href="#/subscribers" class="span-15">SUBSCRIBERS</a>
+			</li>
+			<li data-target="#products" class="collapsed">
+				<a href="#" class="span-15">REPORTS</a>
+			</li>
+			<li data-target="#products" class="collapsed">
+				<a href="#/integrations" class="span-15">INTEGRATIONS</a>
+			</li>
+		</ul>
+	</div>
+</header>

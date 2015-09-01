@@ -1,0 +1,60 @@
+<div class="row add-campaign">
+    <div class="row campaign-tab-header">
+        <ul class="tab-header clearfix">
+            <li ng-click="go('/new_campaigns/post')">
+                <span class="div-post-icon">Post</span>
+            </li>
+            <li ng-click="go('/new_campaigns/announcement')">
+                <span class="div-announcement-icon">Announcement</span>
+            </li>
+            <li class="active" ng-click="go('/new_campaigns/deal')">
+                <span class="div-deal-icon">Deal</span>
+            </li>
+            <li ng-click="go('/new_campaigns/event')">
+                <span class="div-event-icon">Event</span>
+            </li>
+        </ul>
+    </div>
+    <div class="row campaign-tab-body">
+        <form name="post-form" method="POST">
+            <div class="row div-post-title">
+                <label for="inp-post-title" class="span-15 span-black1">Post Title</label><br/>
+                <input type="text" id="inp-post-title" name="inp-post-title">
+            </div>
+            <div class="row div-post-text">
+                <label class="span-15 span-black1">Your Post</label><br/>
+                <textarea data-ui-tinymce id="tinymce3" data-ng-model="from_one.from_one"></textarea>
+            </div>
+            <div class="row div-post-image">
+                <label class="span-15 span-black1">Attach Image</label><br/>
+                <label for="inp-post-image" class="post-image">
+                    <span class="label-post-image span-16 span-white">CHOOSE FILE</span>
+                    <span class=" span-gray2">No File Chosen</span>
+                </label>
+                <input type="file" id="inp-post-image"><br/>
+                <div class="row div-drag">
+                    <span class="span-15 span-italic span-gray2">or just Drag n'Drop file here</span>
+                </div>
+                <div class="row div-warning">
+                    <div class="row">
+                        <img src="img/campaigns/warning-icon.png" />
+                    </div>
+                    <div class="row">
+                        <span class="span-gray2">We recommend an image size 200x200 pxels.</span><br/>
+                        <span class="span-gray2">We’ll expertly format the photo for each channel.</span>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="row border"></div>
+            <div class="row div-post-footer">
+                <div class="row">
+                    <button type="submit"><span class="span-16">SAVE AS DRAFT</span></button>
+                </div>
+                <div class="row">
+                    <button type="submit"><span class="span-16">PUBLISH NOW</span></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

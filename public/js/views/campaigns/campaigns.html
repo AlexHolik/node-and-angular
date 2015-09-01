@@ -1,0 +1,49 @@
+<div class="row cam-head">
+    <div class="row cam-head-content">
+        <div class="col-lg-7 col-md-7 col-sm-7">
+            <h3>CAMPAIGNS</h3>
+        </div>
+        <div class="col-lg-5 col-md-5 col-sm-5">
+            <div class="col-lg-6 span-filter">
+                <span class="span-gray2 span-15">Filter Campaigns:</span>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <section class="main">
+                    <div class="wrapper-demo">
+                        <div id="dd" class="wrapper-dropdown-5" tabindex="1">- Choose type -<img src="img/signup/arrow_icon.png" alt="Arrow Icon" />
+                            <ul class="dropdown">
+                                <li><a href="#"><i class="icon-user"></i>Internet</a></li>
+                                <li><a href="#"><i class="icon-cog"></i>Colleges</a></li>
+                                <li><a href="#"><i class="icon-remove"></i>Friends</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row cam-body">
+    <div class="row cam-ind" ng-repeat="data in datas">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 cam-ind-left">
+            <img ng-src="{{data.background}}">
+        </div>
+        <div class="col-lg-6 col-md-5 col-sm-8 col-xs-12 cam-ind-center">
+            <div class="row">
+                <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
+                    <img ng-src="{{data.icon}}">
+                </div>
+                <div class="col-lg-10 col-md-9 col-sm-9 col-xs-12">
+                    <span class="span-18">{{data.name}}</span><br/>
+                    <span class="span-12"><i>{{data.posted}}</i></span>
+                </div>
+            </div>
+            <div class="row">
+                <span class="span-14">{{data.content}}</span>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 sub-body-btn cam-ind-right  {{data.class}}">
+            <button type="submit"><span class="span-16">{{data.button}}</span></button>
+        </div>
+    </div>
+</div>
